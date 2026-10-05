@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王润泽的个人主页</title>
+  <style>
+    :root {
+      --bg: #f4f7ef;
+      --card: #ffffff;
+      --text: #2f3b2c;
+      --muted: #7c8775;
+      --primary: #7fa05a;
+      --primary-dark: #5f7d40;
+      --primary-soft: #eef4e4;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(90, 120, 70, 0.10);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 60px; }
+
+    /* 顶部信息卡 */
+    .hero {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #9db87a, #6f8f4e);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 44px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .hero-info h1 { font-size: 30px; margin-bottom: 6px; }
+    .hero-info .title { color: var(--primary-dark); font-weight: 600; margin-bottom: 10px; }
+    .hero-info .bio { color: var(--muted); max-width: 520px; }
+
+    /* 分区标题 */
+    section { margin-top: 28px; }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    /* 技能标签 */
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* 项目列表 */
+    .project { padding: 18px 0; border-bottom: 1px solid #edf1e8; }
+    .project:last-child { border-bottom: none; }
+    .project h3 { font-size: 17px; margin-bottom: 4px; }
+    .project p { color: var(--muted); font-size: 14px; }
+
+    /* 联系方式 */
+    .contact-list { list-style: none; }
+    .contact-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #edf1e8;
+      color: var(--muted);
+    }
+    .contact-list li:last-child { border-bottom: none; }
+    .contact-list a { color: var(--primary-dark); text-decoration: none; }
+    .contact-list a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero { flex-direction: column; text-align: center; }
+      .hero-info .bio { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 个人简介 -->
+    <header class="hero">
+      <div class="avatar">王</div>
+      <div class="hero-info">
+        <h1>王润泽</h1>
+        <div class="title">你的职业 / 头衔</div>
+        <p class="bio">
+          在这里写一句关于你自己的介绍，比如你热爱的事情、正在追求的目标，
+          或者一句喜欢的座右铭。
+        </p>
+      </div>
+    </header>
+
+    <!-- 关于我 -->
+    <section>
+      <h2>关于我</h2>
+      <div class="card">
+        <p>
+          这里是「关于我」的详细介绍。可以写你的经历、背景、兴趣爱好，
+          以及你希望来访者了解你的内容。把这段文字替换成你自己的故事吧。
+        </p>
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <section>
+      <h2>我的技能</h2>
+      <div class="card">
+        <div class="tags">
+          <span class="tag">技能一</span>
+          <span class="tag">技能二</span>
+          <span class="tag">技能三</span>
+          <span class="tag">技能四</span>
+          <span class="tag">技能五</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目作品 -->
+    <section>
+      <h2>项目作品</h2>
+      <div class="card">
+        <div class="project">
+          <h3>项目名称一</h3>
+          <p>简单描述这个项目做了什么、用到了什么技术、取得了什么成果。</p>
+        </div>
+        <div class="project">
+          <h3>项目名称二</h3>
+          <p>简单描述这个项目做了什么、用到了什么技术、取得了什么成果。</p>
+        </div>
+        <div class="project">
+          <h3>项目名称三</h3>
+          <p>简单描述这个项目做了什么、用到了什么技术、取得了什么成果。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section>
+      <h2>联系我</h2>
+      <div class="card">
+        <ul class="contact-list">
+          <li>邮箱：your-email@example.com</li>
+          <li>微信：your-wechat</li>
+          <li>GitHub：<a href="https://github.com/">github.com/你的用户名</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
